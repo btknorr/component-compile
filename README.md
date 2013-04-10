@@ -1,7 +1,7 @@
 component-compile
 =================
 
-Component sub-command to pre-compile all your .ejs files to requirable js files
+Component sub-command to pre-compile all your .ejs files to requirable js files.  Sorry does not work on Windows :(
 
 ## Installation
 
