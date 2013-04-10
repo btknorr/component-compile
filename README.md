@@ -9,20 +9,19 @@ Component sub-command to pre-compile all your .ejs files to requirable js files
 
   npm install -g
   
-## Usage
+## Pre-compile all your ejs files
 
 ```
-
-Usage: component compile <dir>
-
-Options:
-
-  -h, --help     output usage information
-
-Examples:
-
-    # compile all .ejs files under dir to js
-    $ component compile dir
-
+    $ component compile <dir>
 ```
 
+## Render your html
+
+```
+//template.ejs has previously been compiled to template.js
+var Template = require('./template');
+var html = Template({
+  title:'Pre-compiling is cool'
+});
+
+```
