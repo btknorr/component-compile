@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var ejs = require('ejs');
+var fs = require('fs');
+var path = require('path');
+var exec = require('child_process').exec;
+
+program.usage('<dir>');
+
+program.on('--help', function(){
+  console.log('  Examples:');
+  console.log();
+  console.log('    # compile all .ejs files under dir to js');
+  console.log('    $ component compile dir');
+  console.log();
+});
+
+program.parse(process.argv);
+
+var dir = program.args[0];
+if (!dir) console.error('<dir> required');
+
+exec('find '+dir+' -name *.ejs', function(err, stdout, stderr) {
+  	var files = stdout.split('\n');
+	var file, fn, out;
+	for (var i=0;i<files.length;i++) {
+		file = files[i];
+		if (file) {
+			var data = fs.readFileSync(file, 'utf8');
+			var fn = ejs.compile(data, {
+				client:true
+			});
+			out = path.join(path.dirname(file), path.basename(file, '.ejs') + '.js');
+			fs.writeFileSync(out, "module.exports = "+fn.toString());
+		}
+	}
+});
+

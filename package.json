@@ -1,0 +1,21 @@
+{
+    "name": "component-compile",
+    "version": "0.0.1",
+    "description": "Compile all .ejs files under a directory",
+    "keywords": [
+        "component",
+        "ejs",
+        "compile"
+    ],
+    "author": "Brian Knorr <btknorr@gmail.com>",
+    "dependencies": {
+        "commander": "*",
+        "ejs":"*"
+    },
+    "bin": {
+        "component-compile": "bin/component-compile"
+    },
+    "engines": {
+        "node": ">= 0.8.0"
+    }
+}
