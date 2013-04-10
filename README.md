@@ -6,22 +6,23 @@ Component sub-command to pre-compile all your .ejs files to requirable js files
 ## Installation
 
   With [Component](http://github.com/component/component) previously installed:
+```
+  $ sudo npm install -g
+```
 
-  npm install -g
-  
 ## Pre-compile all your ejs files recursively
 
 ```
-    $ component compile <dir>
+  $ component compile <dir>
 ```
 
 ## Render your html
 
 ```
-//template.ejs has previously been compiled to template.js
-var Template = require('./template');
-var html = Template({
-  title:'Pre-compiling is cool'
-});
+  //template.ejs has previously been compiled to template.js
+  var Template = require('./template');
+  var html = Template({
+    title:'Pre-compiling is cool'
+  });
 
 ```
