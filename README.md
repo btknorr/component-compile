@@ -7,7 +7,7 @@ Component sub-command to pre-compile all your .ejs files to requirable js files.
 
   With [Component](http://github.com/component/component) previously installed:
 ```
-  $ sudo npm install -g
+  $ npm install -g component-compile
 ```
 
 ## Pre-compile all your ejs files recursively
