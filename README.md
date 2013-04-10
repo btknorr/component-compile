@@ -9,7 +9,7 @@ Component sub-command to pre-compile all your .ejs files to requirable js files
 
   npm install -g
   
-## Pre-compile all your ejs files
+## Pre-compile all your ejs files recursively
 
 ```
     $ component compile <dir>
