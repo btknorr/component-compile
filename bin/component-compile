@@ -21,7 +21,7 @@ program.parse(process.argv);
 var dir = program.args[0];
 if (!dir) console.error('<dir> required');
 
-exec('find '+dir+' -name *.ejs', function(err, stdout, stderr) {
+exec('find '+dir+' -name \'*.ejs\'', function(err, stdout, stderr) {
   	var files = stdout.split('\n');
 	var file, fn, out;
 	for (var i=0;i<files.length;i++) {
